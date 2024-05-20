@@ -82,3 +82,17 @@
 // });
 
 // console.log(newFruits);
+// 2-masaall
+Array.prototype.customEvery = function (callback) {
+  const result = [];
+  for (let i = 0; i < this.length; i++) {
+    result.push(callback(this[i], i, this));
+  }
+  return result;
+};
+const fruits = ["banan", "orangi", "apple", "mango"];
+const newFruits = fruits.customMap((fruit, index) => {
+  return `${index + 1}. ${fruit}`;
+});
+
+console.log(newFruits);
