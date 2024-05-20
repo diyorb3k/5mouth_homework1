@@ -65,11 +65,20 @@
 
 //Array constructoriga quyidagi metodlarni custom variantini qo’shing.///
 // 1-masalaa
-Array.prototype.customMap = function (item) {
-    const map;
-    return this.map(item)
+// Array prototypega customMap metodini qo'shish
+// Array.prototype.customMap = function (callback) {
+//   const result = [];
+//   for (let i = 0; i < this.length; i++) {
+//     result.push(callback(this[i], i, this));
+//   }
 
+//   return result;
+// };
 
-};
+// const fruits = ["banan", "orangi", "apple", "mango"];
 
-const newStr = ["banan", "salom","olma"];
+// const newFruits = fruits.customMap((fruit, index) => {
+//   return `${index + 1}. ${fruit}`;
+// });
+
+// console.log(newFruits);
